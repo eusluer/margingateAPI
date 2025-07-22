@@ -1,71 +1,83 @@
 {
-  "last_update": "2025-07-22T21:39:08.531618",
+  "last_update": "2025-07-22T22:18:14.499375",
   "coins": [
     {
-      "symbol": "BRUSDT",
-      "priceChangePercent": -29.943,
-      "lastPrice": 0.05007,
-      "volume": 691063273.0
-    },
-    {
       "symbol": "CFXUSDT",
-      "priceChangePercent": -28.167,
-      "lastPrice": 0.16385,
-      "volume": 3191510092.0
-    },
-    {
-      "symbol": "UMAUSDT",
-      "priceChangePercent": -21.645,
-      "lastPrice": 1.524,
-      "volume": 164564074.0
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "priceChangePercent": 19.913,
-      "lastPrice": 0.043483,
-      "volume": 34797898894.0
+      "priceChangePercent": -29.355,
+      "lastPrice": 0.16531,
+      "volume": 3175475884.0
     },
     {
       "symbol": "HEIUSDT",
-      "priceChangePercent": 18.611,
-      "lastPrice": 0.4219,
-      "volume": 144861518.4
+      "priceChangePercent": 21.677,
+      "lastPrice": 0.4339,
+      "volume": 150244544.0
     },
     {
-      "symbol": "SWELLUSDT",
-      "priceChangePercent": 13.953,
-      "lastPrice": 0.01519,
-      "volume": 2112181608.0
+      "symbol": "UMAUSDT",
+      "priceChangePercent": -19.802,
+      "lastPrice": 1.543,
+      "volume": 150292776.0
     },
     {
-      "symbol": "API3USDT",
-      "priceChangePercent": -13.949,
-      "lastPrice": 0.8396,
-      "volume": 70535610.8
-    },
-    {
-      "symbol": "AINUSDT",
-      "priceChangePercent": 13.423,
-      "lastPrice": 0.14846,
-      "volume": 321136542.0
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "priceChangePercent": -13.397,
-      "lastPrice": 0.003788,
-      "volume": 191629052425.0
-    },
-    {
-      "symbol": "AGTUSDT",
-      "priceChangePercent": -11.254,
-      "lastPrice": 0.004542,
-      "volume": 3478746733.0
+      "symbol": "PENGUUSDT",
+      "priceChangePercent": 19.034,
+      "lastPrice": 0.043388,
+      "volume": 36114835024.0
     },
     {
       "symbol": "SYNUSDT",
-      "priceChangePercent": 11.119,
-      "lastPrice": 0.1499,
-      "volume": 203978394.0
+      "priceChangePercent": 15.339,
+      "lastPrice": 0.1564,
+      "volume": 222097497.0
+    },
+    {
+      "symbol": "API3USDT",
+      "priceChangePercent": -13.262,
+      "lastPrice": 0.8424,
+      "volume": 59571069.1
+    },
+    {
+      "symbol": "SWELLUSDT",
+      "priceChangePercent": 13.128,
+      "lastPrice": 0.01508,
+      "volume": 2141221798.0
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "priceChangePercent": -12.824,
+      "lastPrice": 0.003732,
+      "volume": 191765281009.0
+    },
+    {
+      "symbol": "DIAUSDT",
+      "priceChangePercent": 12.147,
+      "lastPrice": 1.1273,
+      "volume": 423421204.0
+    },
+    {
+      "symbol": "ZKJUSDT",
+      "priceChangePercent": 11.71,
+      "lastPrice": 0.2156,
+      "volume": 142078860.2
+    },
+    {
+      "symbol": "AGTUSDT",
+      "priceChangePercent": -11.222,
+      "lastPrice": 0.00462,
+      "volume": 3466080007.0
+    },
+    {
+      "symbol": "DOODUSDT",
+      "priceChangePercent": 11.035,
+      "lastPrice": 0.0046114,
+      "volume": 4572559007.0
+    },
+    {
+      "symbol": "DRIFTUSDT",
+      "priceChangePercent": -10.913,
+      "lastPrice": 0.6482,
+      "volume": 112156565.0
     },
     {
       "symbol": "LOKAUSDT",
@@ -74,232 +86,220 @@
       "volume": 179673239.0
     },
     {
-      "symbol": "TANSSIUSDT",
-      "priceChangePercent": 10.324,
-      "lastPrice": 0.0654,
-      "volume": 266538633.0
-    },
-    {
-      "symbol": "DIAUSDT",
-      "priceChangePercent": 9.98,
-      "lastPrice": 1.0811,
-      "volume": 422705439.0
-    },
-    {
-      "symbol": "DRIFTUSDT",
-      "priceChangePercent": -9.889,
-      "lastPrice": 0.6488,
-      "volume": 120425218.0
-    },
-    {
-      "symbol": "DOODUSDT",
-      "priceChangePercent": 9.72,
-      "lastPrice": 0.0045613,
-      "volume": 4568995774.0
-    },
-    {
-      "symbol": "CTKUSDT",
-      "priceChangePercent": 9.7,
-      "lastPrice": 0.4637,
-      "volume": 283553323.0
-    },
-    {
-      "symbol": "AIUSDT",
-      "priceChangePercent": -9.637,
-      "lastPrice": 0.14496,
-      "volume": 110867083.0
-    },
-    {
-      "symbol": "EPICUSDT",
-      "priceChangePercent": -9.587,
-      "lastPrice": 2.3399,
-      "volume": 41600525.4
-    },
-    {
-      "symbol": "DMCUSDT",
-      "priceChangePercent": 8.877,
-      "lastPrice": 0.005372,
-      "volume": 2093561834.0
-    },
-    {
-      "symbol": "GPSUSDT",
-      "priceChangePercent": -8.542,
-      "lastPrice": 0.02077,
-      "volume": 358101650.0
-    },
-    {
       "symbol": "ICNTUSDT",
-      "priceChangePercent": 8.472,
-      "lastPrice": 0.2535,
-      "volume": 53856854.0
+      "priceChangePercent": 9.73,
+      "lastPrice": 0.256,
+      "volume": 55522957.0
     },
     {
-      "symbol": "ZKJUSDT",
-      "priceChangePercent": 8.398,
-      "lastPrice": 0.2104,
-      "volume": 140522784.1
+      "symbol": "AINUSDT",
+      "priceChangePercent": 9.243,
+      "lastPrice": 0.14407,
+      "volume": 353024806.0
     },
     {
-      "symbol": "RLCUSDT",
-      "priceChangePercent": -8.038,
-      "lastPrice": 1.2025,
-      "volume": 12936872.4
-    },
-    {
-      "symbol": "XTZUSDT",
-      "priceChangePercent": -8.019,
-      "lastPrice": 0.952,
-      "volume": 119838153.0
-    },
-    {
-      "symbol": "FIDAUSDT",
-      "priceChangePercent": 7.816,
-      "lastPrice": 0.12663,
-      "volume": 1071201525.0
-    },
-    {
-      "symbol": "BANANAUSDT",
-      "priceChangePercent": 7.672,
-      "lastPrice": 29.388,
-      "volume": 1712306.2
-    },
-    {
-      "symbol": "1000000BOBUSDT",
-      "priceChangePercent": -7.479,
-      "lastPrice": 0.05703,
-      "volume": 198659052.0
-    },
-    {
-      "symbol": "OMUSDT",
-      "priceChangePercent": -7.317,
-      "lastPrice": 0.3064,
-      "volume": 687180383.6
-    },
-    {
-      "symbol": "DEGOUSDT",
-      "priceChangePercent": 7.221,
-      "lastPrice": 1.2606,
-      "volume": 6944650.3
-    },
-    {
-      "symbol": "ENAUSDT",
-      "priceChangePercent": -7.054,
-      "lastPrice": 0.5086,
-      "volume": 2375168260.0
-    },
-    {
-      "symbol": "LAYERUSDT",
-      "priceChangePercent": 7.018,
-      "lastPrice": 0.8051,
-      "volume": 150561528.1
-    },
-    {
-      "symbol": "UXLINKUSDT",
-      "priceChangePercent": 6.975,
-      "lastPrice": 0.4279,
-      "volume": 210952860.0
-    },
-    {
-      "symbol": "AVAAIUSDT",
-      "priceChangePercent": -6.711,
-      "lastPrice": 0.03892,
-      "volume": 702991078.0
-    },
-    {
-      "symbol": "SUSDT",
-      "priceChangePercent": -6.432,
-      "lastPrice": 0.3724,
-      "volume": 202513591.0
-    },
-    {
-      "symbol": "PUMPBTCUSDT",
-      "priceChangePercent": 6.348,
-      "lastPrice": 0.04339,
-      "volume": 60553672.0
-    },
-    {
-      "symbol": "ZENUSDT",
-      "priceChangePercent": -6.203,
-      "lastPrice": 9.436,
-      "volume": 2572661.3
+      "symbol": "TANSSIUSDT",
+      "priceChangePercent": 9.047,
+      "lastPrice": 0.06521,
+      "volume": 268285449.0
     },
     {
       "symbol": "LAUSDT",
-      "priceChangePercent": 6.197,
-      "lastPrice": 0.377,
-      "volume": 133388835.4
+      "priceChangePercent": 8.475,
+      "lastPrice": 0.384,
+      "volume": 134531331.5
     },
     {
-      "symbol": "TOKENUSDT",
-      "priceChangePercent": -6.154,
-      "lastPrice": 0.01769,
-      "volume": 427471473.0
+      "symbol": "1000000BOBUSDT",
+      "priceChangePercent": -8.391,
+      "lastPrice": 0.0571,
+      "volume": 196829290.0
     },
     {
-      "symbol": "PEOPLEUSDT",
-      "priceChangePercent": -6.104,
-      "lastPrice": 0.02292,
-      "volume": 3382991703.0
+      "symbol": "BANANAUSDT",
+      "priceChangePercent": 8.262,
+      "lastPrice": 29.419,
+      "volume": 1716950.9
     },
     {
-      "symbol": "MELANIAUSDT",
-      "priceChangePercent": -5.97,
-      "lastPrice": 0.2457,
-      "volume": 95522449.79
+      "symbol": "CTKUSDT",
+      "priceChangePercent": 7.939,
+      "lastPrice": 0.4582,
+      "volume": 286471694.0
     },
     {
-      "symbol": "MUSDT",
-      "priceChangePercent": -5.874,
-      "lastPrice": 0.3846,
-      "volume": 144125996.0
+      "symbol": "FIDAUSDT",
+      "priceChangePercent": 7.852,
+      "lastPrice": 0.12692,
+      "volume": 1064973088.0
     },
     {
-      "symbol": "MOODENGUSDT",
-      "priceChangePercent": 5.626,
-      "lastPrice": 0.21628,
-      "volume": 1847748769.0
+      "symbol": "UXLINKUSDT",
+      "priceChangePercent": 7.802,
+      "lastPrice": 0.4297,
+      "volume": 211432061.0
     },
     {
-      "symbol": "FHEUSDT",
-      "priceChangePercent": -5.585,
-      "lastPrice": 0.05951,
-      "volume": 104051108.0
+      "symbol": "PUMPBTCUSDT",
+      "priceChangePercent": 7.563,
+      "lastPrice": 0.04366,
+      "volume": 59314433.0
+    },
+    {
+      "symbol": "XTZUSDT",
+      "priceChangePercent": -7.52,
+      "lastPrice": 0.947,
+      "volume": 116660077.7
+    },
+    {
+      "symbol": "GPSUSDT",
+      "priceChangePercent": -7.475,
+      "lastPrice": 0.02092,
+      "volume": 358969762.0
+    },
+    {
+      "symbol": "ENAUSDT",
+      "priceChangePercent": -7.104,
+      "lastPrice": 0.5061,
+      "volume": 2327432455.0
+    },
+    {
+      "symbol": "OMUSDT",
+      "priceChangePercent": -6.918,
+      "lastPrice": 0.30676,
+      "volume": 677040570.3
+    },
+    {
+      "symbol": "EPICUSDT",
+      "priceChangePercent": -6.76,
+      "lastPrice": 2.3463,
+      "volume": 40988051.9
     },
     {
       "symbol": "BDXNUSDT",
-      "priceChangePercent": -5.48,
-      "lastPrice": 0.03415,
-      "volume": 113051397.0
+      "priceChangePercent": -6.723,
+      "lastPrice": 0.03399,
+      "volume": 113094168.0
     },
     {
-      "symbol": "CELRUSDT",
-      "priceChangePercent": -5.456,
-      "lastPrice": 0.00901,
-      "volume": 514672699.0
+      "symbol": "FHEUSDT",
+      "priceChangePercent": -6.689,
+      "lastPrice": 0.05901,
+      "volume": 101535901.0
     },
     {
-      "symbol": "1000RATSUSDT",
-      "priceChangePercent": -5.419,
-      "lastPrice": 0.02147,
-      "volume": 300952280.0
+      "symbol": "LAYERUSDT",
+      "priceChangePercent": 6.642,
+      "lastPrice": 0.7996,
+      "volume": 151681184.2
     },
     {
-      "symbol": "AAVEUSDT",
-      "priceChangePercent": -5.408,
-      "lastPrice": 306.26,
-      "volume": 1565943.2
+      "symbol": "RLCUSDT",
+      "priceChangePercent": -6.54,
+      "lastPrice": 1.2218,
+      "volume": 10019371.5
     },
     {
-      "symbol": "SCRUSDT",
-      "priceChangePercent": -5.401,
-      "lastPrice": 0.3363,
-      "volume": 16546147.0
+      "symbol": "DMCUSDT",
+      "priceChangePercent": 6.505,
+      "lastPrice": 0.005239,
+      "volume": 2307415945.0
+    },
+    {
+      "symbol": "MOODENGUSDT",
+      "priceChangePercent": 6.455,
+      "lastPrice": 0.21999,
+      "volume": 1847643769.0
     },
     {
       "symbol": "BIDUSDT",
-      "priceChangePercent": -5.28,
-      "lastPrice": 0.08163,
-      "volume": 240508953.0
+      "priceChangePercent": -6.381,
+      "lastPrice": 0.08128,
+      "volume": 237990140.0
+    },
+    {
+      "symbol": "1000BONKUSDT",
+      "priceChangePercent": 6.069,
+      "lastPrice": 0.036547,
+      "volume": 23815201646.0
+    },
+    {
+      "symbol": "SXTUSDT",
+      "priceChangePercent": 5.98,
+      "lastPrice": 0.09021,
+      "volume": 123484487.0
+    },
+    {
+      "symbol": "SUSDT",
+      "priceChangePercent": -5.958,
+      "lastPrice": 0.3741,
+      "volume": 204426303.0
+    },
+    {
+      "symbol": "1000FLOKIUSDT",
+      "priceChangePercent": 5.921,
+      "lastPrice": 0.1465,
+      "volume": 1802151807.0
+    },
+    {
+      "symbol": "HUMAUSDT",
+      "priceChangePercent": 5.874,
+      "lastPrice": 0.041146,
+      "volume": 1892363919.0
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "priceChangePercent": 5.709,
+      "lastPrice": 0.027331,
+      "volume": 5128472981.0
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "priceChangePercent": -5.686,
+      "lastPrice": 305.89,
+      "volume": 1574341.5
+    },
+    {
+      "symbol": "AIUSDT",
+      "priceChangePercent": -5.641,
+      "lastPrice": 0.14586,
+      "volume": 108978400.0
+    },
+    {
+      "symbol": "RPLUSDT",
+      "priceChangePercent": -5.468,
+      "lastPrice": 7.33,
+      "volume": 1433849.6
+    },
+    {
+      "symbol": "MERLUSDT",
+      "priceChangePercent": 5.429,
+      "lastPrice": 0.12952,
+      "volume": 55183257.0
+    },
+    {
+      "symbol": "BULLAUSDT",
+      "priceChangePercent": 5.405,
+      "lastPrice": 0.0741,
+      "volume": 118662926.0
+    },
+    {
+      "symbol": "AVAAIUSDT",
+      "priceChangePercent": -5.3,
+      "lastPrice": 0.03949,
+      "volume": 708917614.0
+    },
+    {
+      "symbol": "MUSDT",
+      "priceChangePercent": -5.201,
+      "lastPrice": 0.3846,
+      "volume": 144843015.0
+    },
+    {
+      "symbol": "ZENUSDT",
+      "priceChangePercent": -5.121,
+      "lastPrice": 9.56,
+      "volume": 2623040.2
     }
   ]
 }
