@@ -135,7 +135,6 @@ def run_signals_job():
         print(f"[HATA] signals.json kaydedilemedi veya upload edilemedi: {e}")
 
 if __name__ == "__main__":
-    while True:
         print(f"\n[{datetime.now()}] Sinyal üretim işlemi başladı...")
         run_signals_job()
         print("[Sinyal JOB] 1 dakika bekleniyor...\n")

@@ -98,7 +98,6 @@ def run_ohlcv_job():
         print(f"Kaydetme veya upload hatası: {e}")
 
 if __name__ == "__main__":
-    while True:
         print(f"\n[{datetime.now()}] OHLCV çekme işlemi başladı...")
         run_ohlcv_job()
         print("[OHLCV JOB] 1 dakika bekleniyor...\n")

@@ -100,7 +100,6 @@ def save_to_json(data, filename="coins.json"):
         }, f, ensure_ascii=False, indent=2)
 
 def main_loop():
-    while True:
         print(f"\n[{datetime.now()}] --- Başladı ---")
         coins = get_top_volatile_perpetual_symbols(50)
         save_to_json(coins)

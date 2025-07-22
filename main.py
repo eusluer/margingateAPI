@@ -20,7 +20,6 @@ def upload_to_supabase_storage(local_file, remote_name):
     if resp.status_code not in [200, 201]:
         print("Upload failed:", resp.text)
 
-while True:
     print("\n[START] coins.py çalışıyor...")
     subprocess.call(["python", "coins.py"])
     upload_to_supabase_storage("coins.json", "coins.json")
