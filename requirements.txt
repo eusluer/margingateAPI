@@ -1,6 +1,4 @@
 requests
 pandas
-datetime
-time
 subprocess
 flask
