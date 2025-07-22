@@ -1,5 +1,5 @@
 {
-  "last_update": "2025-07-22T21:30:46.661863",
+  "last_update": "2025-07-22T21:38:46.235205",
   "alarms": [
     {
       "type": "SHORT",
@@ -11,11 +11,30 @@
       },
       "choc_30m": [
         {
-          "index": 58,
+          "index": 57,
           "type": "CHoCH",
           "from": "BOS_down",
           "to": "BOS_up",
           "level": 2.62
+        }
+      ],
+      "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
+    },
+    {
+      "type": "SHORT",
+      "symbol": "CTKUSDT",
+      "bos_4h": {
+        "index": 72,
+        "type": "BOS_up",
+        "level": 0.5163
+      },
+      "choc_30m": [
+        {
+          "index": 74,
+          "type": "CHoCH",
+          "from": "BOS_up",
+          "to": "BOS_down",
+          "level": 0.4556
         }
       ],
       "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
@@ -30,7 +49,7 @@
       },
       "choc_30m": [
         {
-          "index": 67,
+          "index": 66,
           "type": "CHoCH",
           "from": "BOS_down",
           "to": "BOS_up",
@@ -49,49 +68,11 @@
       },
       "choc_30m": [
         {
-          "index": 74,
+          "index": 73,
           "type": "CHoCH",
           "from": "BOS_down",
           "to": "BOS_up",
           "level": 1.1028
-        }
-      ],
-      "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
-    },
-    {
-      "type": "SHORT",
-      "symbol": "ALICEUSDT",
-      "bos_4h": {
-        "index": 67,
-        "type": "BOS_up",
-        "level": 0.507
-      },
-      "choc_30m": [
-        {
-          "index": 70,
-          "type": "CHoCH",
-          "from": "BOS_down",
-          "to": "BOS_up",
-          "level": 0.477
-        }
-      ],
-      "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
-    },
-    {
-      "type": "SHORT",
-      "symbol": "FETUSDT",
-      "bos_4h": {
-        "index": 67,
-        "type": "BOS_up",
-        "level": 0.885
-      },
-      "choc_30m": [
-        {
-          "index": 68,
-          "type": "CHoCH",
-          "from": "BOS_down",
-          "to": "BOS_up",
-          "level": 0.8162
         }
       ],
       "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
@@ -106,11 +87,68 @@
       },
       "choc_30m": [
         {
-          "index": 58,
+          "index": 57,
           "type": "CHoCH",
           "from": "BOS_up",
           "to": "BOS_down",
           "level": 0.11541
+        }
+      ],
+      "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
+    },
+    {
+      "type": "SHORT",
+      "symbol": "FETUSDT",
+      "bos_4h": {
+        "index": 67,
+        "type": "BOS_up",
+        "level": 0.885
+      },
+      "choc_30m": [
+        {
+          "index": 67,
+          "type": "CHoCH",
+          "from": "BOS_down",
+          "to": "BOS_up",
+          "level": 0.8162
+        }
+      ],
+      "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
+    },
+    {
+      "type": "SHORT",
+      "symbol": "ALICEUSDT",
+      "bos_4h": {
+        "index": 67,
+        "type": "BOS_up",
+        "level": 0.507
+      },
+      "choc_30m": [
+        {
+          "index": 69,
+          "type": "CHoCH",
+          "from": "BOS_down",
+          "to": "BOS_up",
+          "level": 0.477
+        }
+      ],
+      "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
+    },
+    {
+      "type": "SHORT",
+      "symbol": "SCRUSDT",
+      "bos_4h": {
+        "index": 65,
+        "type": "BOS_up",
+        "level": 0.3738
+      },
+      "choc_30m": [
+        {
+          "index": 67,
+          "type": "CHoCH",
+          "from": "BOS_down",
+          "to": "BOS_up",
+          "level": 0.3445
         }
       ],
       "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
@@ -125,7 +163,7 @@
       },
       "choc_30m": [
         {
-          "index": 70,
+          "index": 69,
           "type": "CHoCH",
           "from": "BOS_down",
           "to": "BOS_up",
@@ -144,7 +182,7 @@
       },
       "choc_30m": [
         {
-          "index": 70,
+          "index": 69,
           "type": "CHoCH",
           "from": "BOS_down",
           "to": "BOS_up",
@@ -154,23 +192,40 @@
       "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
     },
     {
-      "type": "SHORT",
-      "symbol": "SCRUSDT",
-      "bos_4h": {
-        "index": 65,
-        "type": "BOS_up",
-        "level": 0.3738
-      },
-      "choc_30m": [
-        {
-          "index": 68,
-          "type": "CHoCH",
-          "from": "BOS_down",
-          "to": "BOS_up",
-          "level": 0.3445
-        }
-      ],
-      "rule": "4h BOS_up + 30m last 20 CHoCH (Short Signal)"
+      "type": "LONG",
+      "symbol": "BRUSDT",
+      "interval": "4h",
+      "bos_idx": 49,
+      "bos_level": 0.07359,
+      "dip_idx": 25,
+      "dip_price": 0.06656,
+      "alarm_level": 0.070075,
+      "current_price": 0.0501,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "BRUSDT",
+      "interval": "2h",
+      "bos_idx": 46,
+      "bos_level": 0.07296,
+      "dip_idx": 24,
+      "dip_price": 0.06166,
+      "alarm_level": 0.06731,
+      "current_price": 0.05008,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "CFXUSDT",
+      "interval": "4h",
+      "bos_idx": 62,
+      "bos_level": 0.2516,
+      "dip_idx": 0,
+      "dip_price": 0.0775,
+      "alarm_level": 0.16455,
+      "current_price": 0.16415,
+      "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
@@ -181,7 +236,7 @@
       "dip_idx": 1,
       "dip_price": 1.1,
       "alarm_level": 1.5735000000000001,
-      "current_price": 1.523,
+      "current_price": 1.519,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
@@ -193,7 +248,7 @@
       "dip_idx": 35,
       "dip_price": 1.171,
       "alarm_level": 1.609,
-      "current_price": 1.524,
+      "current_price": 1.519,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
@@ -205,7 +260,7 @@
       "dip_idx": 1,
       "dip_price": 0.6445,
       "alarm_level": 0.8387499999999999,
-      "current_price": 0.8338,
+      "current_price": 0.835,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
@@ -217,31 +272,19 @@
       "dip_idx": 15,
       "dip_price": 0.7038,
       "alarm_level": 0.8684,
-      "current_price": 0.8335,
+      "current_price": 0.8351,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
       "symbol": "EPICUSDT",
       "interval": "30m",
-      "bos_idx": 58,
+      "bos_idx": 57,
       "bos_level": 2.62,
-      "dip_idx": 56,
+      "dip_idx": 55,
       "dip_price": 2.2712,
       "alarm_level": 2.4455999999999998,
-      "current_price": 2.35,
-      "rule": "BOS_up equilibrium long alarm"
-    },
-    {
-      "type": "LONG",
-      "symbol": "CTKUSDT",
-      "interval": "15m",
-      "bos_idx": 45,
-      "bos_level": 0.5163,
-      "dip_idx": 6,
-      "dip_price": 0.4115,
-      "alarm_level": 0.4639,
-      "current_price": 0.4628,
+      "current_price": 2.3405,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
@@ -253,31 +296,19 @@
       "dip_idx": 27,
       "dip_price": 0.03958,
       "alarm_level": 0.043255,
-      "current_price": 0.03882,
+      "current_price": 0.03871,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
       "symbol": "AVAAIUSDT",
       "interval": "15m",
-      "bos_idx": 61,
+      "bos_idx": 60,
       "bos_level": 0.04239,
-      "dip_idx": 34,
+      "dip_idx": 33,
       "dip_price": 0.03966,
       "alarm_level": 0.041025,
-      "current_price": 0.03885,
-      "rule": "BOS_up equilibrium long alarm"
-    },
-    {
-      "type": "LONG",
-      "symbol": "RLCUSDT",
-      "interval": "2h",
-      "bos_idx": 62,
-      "bos_level": 1.3455,
-      "dip_idx": 15,
-      "dip_price": 1.0868,
-      "alarm_level": 1.2161499999999998,
-      "current_price": 1.198,
+      "current_price": 0.03871,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
@@ -289,67 +320,43 @@
       "dip_idx": 29,
       "dip_price": 0.22103,
       "alarm_level": 0.307935,
-      "current_price": 0.30722,
+      "current_price": 0.30676,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
       "symbol": "OMUSDT",
       "interval": "15m",
-      "bos_idx": 55,
+      "bos_idx": 54,
       "bos_level": 0.31532,
-      "dip_idx": 20,
+      "dip_idx": 19,
       "dip_price": 0.30123,
       "alarm_level": 0.30827499999999997,
-      "current_price": 0.30702,
+      "current_price": 0.3068,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
       "symbol": "PEOPLEUSDT",
       "interval": "15m",
-      "bos_idx": 55,
+      "bos_idx": 54,
       "bos_level": 0.02353,
-      "dip_idx": 35,
+      "dip_idx": 34,
       "dip_price": 0.02252,
       "alarm_level": 0.023024999999999997,
-      "current_price": 0.02281,
+      "current_price": 0.02286,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
-      "symbol": "1000RATSUSDT",
-      "interval": "4h",
-      "bos_idx": 61,
-      "bos_level": 0.02402,
-      "dip_idx": 13,
-      "dip_price": 0.0194,
-      "alarm_level": 0.02171,
-      "current_price": 0.02137,
-      "rule": "BOS_up equilibrium long alarm"
-    },
-    {
-      "type": "LONG",
-      "symbol": "1000RATSUSDT",
+      "symbol": "RLCUSDT",
       "interval": "2h",
-      "bos_idx": 48,
-      "bos_level": 0.02402,
-      "dip_idx": 0,
-      "dip_price": 0.02119,
-      "alarm_level": 0.022605,
-      "current_price": 0.02137,
-      "rule": "BOS_up equilibrium long alarm"
-    },
-    {
-      "type": "LONG",
-      "symbol": "1000RATSUSDT",
-      "interval": "15m",
-      "bos_idx": 48,
-      "bos_level": 0.02193,
-      "dip_idx": 34,
-      "dip_price": 0.0209,
-      "alarm_level": 0.021415,
-      "current_price": 0.02137,
+      "bos_idx": 62,
+      "bos_level": 1.3455,
+      "dip_idx": 15,
+      "dip_price": 1.0868,
+      "alarm_level": 1.2161499999999998,
+      "current_price": 1.1981,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
@@ -361,19 +368,31 @@
       "dip_idx": 29,
       "dip_price": 0.7387,
       "alarm_level": 0.81185,
-      "current_price": 0.802,
+      "current_price": 0.8031,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
-      "symbol": "ZROUSDT",
+      "symbol": "SCRUSDT",
+      "interval": "30m",
+      "bos_idx": 67,
+      "bos_level": 0.3445,
+      "dip_idx": 53,
+      "dip_price": 0.3298,
+      "alarm_level": 0.33714999999999995,
+      "current_price": 0.3354,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "SCRUSDT",
       "interval": "15m",
       "bos_idx": 61,
-      "bos_level": 2.2566,
-      "dip_idx": 57,
-      "dip_price": 2.1745,
-      "alarm_level": 2.2155500000000004,
-      "current_price": 2.2106,
+      "bos_level": 0.3445,
+      "dip_idx": 33,
+      "dip_price": 0.3298,
+      "alarm_level": 0.33714999999999995,
+      "current_price": 0.3354,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
@@ -385,19 +404,79 @@
       "dip_idx": 13,
       "dip_price": 0.03098,
       "alarm_level": 0.034975,
-      "current_price": 0.03392,
+      "current_price": 0.03405,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
-      "symbol": "CKBUSDT",
+      "symbol": "LAYERUSDT",
+      "interval": "15m",
+      "bos_idx": 44,
+      "bos_level": 0.8468,
+      "dip_idx": 0,
+      "dip_price": 0.7619,
+      "alarm_level": 0.80435,
+      "current_price": 0.8019,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "1000RATSUSDT",
+      "interval": "4h",
+      "bos_idx": 61,
+      "bos_level": 0.02402,
+      "dip_idx": 13,
+      "dip_price": 0.0194,
+      "alarm_level": 0.02171,
+      "current_price": 0.0214,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "1000RATSUSDT",
       "interval": "2h",
-      "bos_idx": 49,
-      "bos_level": 0.007439,
-      "dip_idx": 37,
-      "dip_price": 0.004257,
-      "alarm_level": 0.005848000000000001,
-      "current_price": 0.005637,
+      "bos_idx": 48,
+      "bos_level": 0.02402,
+      "dip_idx": 0,
+      "dip_price": 0.02119,
+      "alarm_level": 0.022605,
+      "current_price": 0.0214,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "1000RATSUSDT",
+      "interval": "15m",
+      "bos_idx": 47,
+      "bos_level": 0.02193,
+      "dip_idx": 33,
+      "dip_price": 0.0209,
+      "alarm_level": 0.021415,
+      "current_price": 0.0214,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "UXLINKUSDT",
+      "interval": "30m",
+      "bos_idx": 41,
+      "bos_level": 0.468,
+      "dip_idx": 1,
+      "dip_price": 0.3892,
+      "alarm_level": 0.4286,
+      "current_price": 0.4277,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "ZROUSDT",
+      "interval": "15m",
+      "bos_idx": 60,
+      "bos_level": 2.2566,
+      "dip_idx": 56,
+      "dip_price": 2.1745,
+      "alarm_level": 2.2155500000000004,
+      "current_price": 2.2101,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
@@ -409,31 +488,55 @@
       "dip_idx": 29,
       "dip_price": 0.7719,
       "alarm_level": 0.8313,
-      "current_price": 0.8196,
+      "current_price": 0.8187,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
-      "symbol": "SCRUSDT",
-      "interval": "30m",
-      "bos_idx": 68,
-      "bos_level": 0.3445,
-      "dip_idx": 54,
-      "dip_price": 0.3298,
-      "alarm_level": 0.33714999999999995,
-      "current_price": 0.3364,
+      "symbol": "LISTAUSDT",
+      "interval": "2h",
+      "bos_idx": 58,
+      "bos_level": 0.2865,
+      "dip_idx": 13,
+      "dip_price": 0.256,
+      "alarm_level": 0.27125,
+      "current_price": 0.2662,
       "rule": "BOS_up equilibrium long alarm"
     },
     {
       "type": "LONG",
-      "symbol": "SCRUSDT",
-      "interval": "15m",
+      "symbol": "INITUSDT",
+      "interval": "4h",
       "bos_idx": 62,
-      "bos_level": 0.3445,
-      "dip_idx": 34,
-      "dip_price": 0.3298,
-      "alarm_level": 0.33714999999999995,
-      "current_price": 0.3364,
+      "bos_level": 0.5808,
+      "dip_idx": 0,
+      "dip_price": 0.3793,
+      "alarm_level": 0.48005,
+      "current_price": 0.4743,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "INITUSDT",
+      "interval": "2h",
+      "bos_idx": 50,
+      "bos_level": 0.5808,
+      "dip_idx": 27,
+      "dip_price": 0.4155,
+      "alarm_level": 0.49815,
+      "current_price": 0.4744,
+      "rule": "BOS_up equilibrium long alarm"
+    },
+    {
+      "type": "LONG",
+      "symbol": "INITUSDT",
+      "interval": "15m",
+      "bos_idx": 65,
+      "bos_level": 0.4864,
+      "dip_idx": 37,
+      "dip_price": 0.4653,
+      "alarm_level": 0.47585,
+      "current_price": 0.4745,
       "rule": "BOS_up equilibrium long alarm"
     }
   ]
