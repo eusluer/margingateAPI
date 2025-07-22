@@ -1,0 +1,113 @@
+import json
+import pandas as pd
+from datetime import datetime
+import time
+
+# --- FVG Tespiti ---
+def detect_fvg(ohlcv):
+    df = pd.DataFrame(ohlcv)
+    results = []
+    for i in range(2, len(df)):
+        if df.loc[i-2, "high"] < df.loc[i, "low"]:
+            results.append({
+                "index": int(i),
+                "type": "bullish",
+                "gap": [float(df.loc[i-2, "high"]), float(df.loc[i, "low"])]
+            })
+        elif df.loc[i-2, "low"] > df.loc[i, "high"]:
+            results.append({
+                "index": int(i),
+                "type": "bearish",
+                "gap": [float(df.loc[i, "high"]), float(df.loc[i-2, "low"])]
+            })
+    return results
+
+# --- BOS Tespiti ---
+def detect_bos(ohlcv, lookback=20):
+    df = pd.DataFrame(ohlcv)
+    results = []
+    for i in range(lookback, len(df)):
+        local_high = max(df["high"][i-lookback:i])
+        local_low = min(df["low"][i-lookback:i])
+        if df.loc[i, "high"] > local_high:
+            results.append({"index": int(i), "type": "BOS_up", "level": float(df.loc[i, "high"])})
+        if df.loc[i, "low"] < local_low:
+            results.append({"index": int(i), "type": "BOS_down", "level": float(df.loc[i, "low"])})
+    return results
+
+# --- CHoCH Tespiti ---
+def detect_choch(bos_signals):
+    results = []
+    if len(bos_signals) < 2:
+        return results
+    last = bos_signals[-1]
+    prev = bos_signals[-2]
+    if last["type"] != prev["type"]:
+        results.append({
+            "index": last["index"],
+            "type": "CHoCH",
+            "from": prev["type"],
+            "to": last["type"],
+            "level": last["level"]
+        })
+    return results
+
+# --- RSI Hesapla ---
+def compute_rsi(ohlcv, period=14):
+    closes = [x["close"] for x in ohlcv]
+    df = pd.DataFrame({"close": closes})
+    delta = df["close"].diff()
+    gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
+    loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
+    rs = gain / loss
+    rsi = 100 - (100 / (1 + rs))
+    df["rsi"] = rsi
+    return df["rsi"].tolist()
+
+def run_signals_job():
+    try:
+        with open("ohlcv_data.json", "r") as f:
+            raw = json.load(f)
+        data = raw["data"]
+    except Exception as e:
+        print(f"[HATA] ohlcv_data.json okunamadı: {e}")
+        return
+
+    all_signals = {
+        "last_update": datetime.now().isoformat(),
+        "signals": {}
+    }
+
+    for symbol, intervals in data.items():
+        all_signals["signals"][symbol] = {}
+        for interval, ohlcv in intervals.items():
+            if len(ohlcv) < 20:
+                continue
+
+            fvg_signals = detect_fvg(ohlcv)
+            bos_signals = detect_bos(ohlcv)
+            choch_signals = detect_choch(bos_signals)
+            rsi_values = compute_rsi(ohlcv)
+            last_rsi = rsi_values[-1] if len(rsi_values) > 0 else None
+
+            all_signals["signals"][symbol][interval] = {
+                "FVG": fvg_signals[-3:],
+                "BOS": bos_signals[-3:],
+                "CHoCH": choch_signals,
+                "RSI": last_rsi
+            }
+            print(f"{symbol}-{interval}: FVG={len(fvg_signals)} BOS={len(bos_signals)} CHoCH={len(choch_signals)} RSI={last_rsi:.2f}" if last_rsi else f"{symbol}-{interval}: FVG={len(fvg_signals)} BOS={len(bos_signals)} CHoCH={len(choch_signals)} RSI=None")
+
+    try:
+        with open("signals.json", "w", encoding="utf-8") as f:
+            json.dump(all_signals, f, ensure_ascii=False, indent=2)
+        print("signals.json kaydedildi.")
+    except Exception as e:
+        print(f"[HATA] signals.json kaydedilemedi: {e}")
+
+if __name__ == "__main__":
+    while True:
+        print(f"\n[{datetime.now()}] Sinyal üretim işlemi başladı...")
+        run_signals_job()
+        print("[Sinyal JOB] 1 dakika bekleniyor...\n")
+        time.sleep(60)
