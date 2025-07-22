@@ -2,6 +2,32 @@ import json
 import pandas as pd
 from datetime import datetime
 import time
+import requests
+import os
+
+SUPABASE_URL = "https://muwqydzmponlsoagasnw.supabase.co"
+SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im11d3F5ZHptcG9ubHNvYWdhc253Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MzIwODM3MywiZXhwIjoyMDY4Nzg0MzczfQ.1l5Uiy760Z2CQAY_pO4dcwIGKY59u5R3OBQ2I-F12Ck"
+BUCKET = "signals"
+
+def upload_to_supabase_storage(local_file, remote_name):
+    if not os.path.exists(local_file):
+        print(f"[SUPABASE] {local_file} bulunamadı, yüklenmedi.")
+        return
+    with open(local_file, "rb") as f:
+        file_data = f.read()
+    endpoint = f"{SUPABASE_URL}/storage/v1/object/{BUCKET}/{remote_name}"
+    headers = {
+        "apikey": SUPABASE_SERVICE_ROLE_KEY,
+        "Authorization": f"Bearer {SUPABASE_SERVICE_ROLE_KEY}",
+        "Content-Type": "application/json"
+    }
+    try:
+        resp = requests.put(endpoint, headers=headers, data=file_data)
+        print(f"[SUPABASE] {remote_name} upload status: {resp.status_code}")
+        if resp.status_code not in [200, 201]:
+            print("Upload failed:", resp.text)
+    except Exception as e:
+        print(f"[SUPABASE] Upload error for {remote_name}: {e}")
 
 # --- FVG Tespiti ---
 def detect_fvg(ohlcv):
@@ -98,12 +124,15 @@ def run_signals_job():
             }
             print(f"{symbol}-{interval}: FVG={len(fvg_signals)} BOS={len(bos_signals)} CHoCH={len(choch_signals)} RSI={last_rsi:.2f}" if last_rsi else f"{symbol}-{interval}: FVG={len(fvg_signals)} BOS={len(bos_signals)} CHoCH={len(choch_signals)} RSI=None")
 
+    # signals.json'u local'e kaydet ve Supabase'a yükle
     try:
-        with open("signals.json", "w", encoding="utf-8") as f:
+        local_filename = "signals.json"
+        with open(local_filename, "w", encoding="utf-8") as f:
             json.dump(all_signals, f, ensure_ascii=False, indent=2)
         print("signals.json kaydedildi.")
+        upload_to_supabase_storage(local_filename, local_filename)
     except Exception as e:
-        print(f"[HATA] signals.json kaydedilemedi: {e}")
+        print(f"[HATA] signals.json kaydedilemedi veya upload edilemedi: {e}")
 
 if __name__ == "__main__":
     while True:
